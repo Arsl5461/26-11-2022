@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Create from './Components/Create';
+import {Routes,Route} from "react-router-dom"
+import CreateTodo from './Components/CreateTodo';
+import ShowTodo from './Components/ShowTodo';
+import EditTodo from './Components/EditTodo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+
+<Routes>
+<Route path="/25524" exact={true} element={<Create/>}></Route>
+<Route path="/create" element={<CreateTodo/>}></Route>
+{/* <Route path="/show" element={<ShowTodo/>}></Route> */}
+
+<Route path="25524/edit/:id" exact={true} element={<EditTodo/>}></Route>
+</Routes>
+
+  </>
   );
 }
 
